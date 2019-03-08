@@ -23,11 +23,15 @@ This is build based upon [NeuroNLP2](https://github.com/XuezheMax/NeuroNLP2) and
 
 ## Training and Testing
 * We provide exampling scripts for training and testing, please follow those examples (some of the paths in the scripts are specific to our environment, you may need to set up the correct paths).
+* ---
 * Step 1: build dictionaries (see [`examples/run_more/prepare_vocab.sh`](examples/run_more/prepare_vocab.sh)). This step will build the vocabs (use [`examples/vocab/build_joint_vocab_embed.py`](examples/vocab/build_joint_vocab_embed.py)) for the source language together with source embeddings.
 * Step 2: train the models (see `examples/run_more/train_*.sh`) on the source language. Here, we have four types of models correspoding to those in our paper, the names are slightly different, here are the mappings: `SelfAttGraph`->[`train_graph.sh`](examples/run_more/train_graph.sh), `RNNGraph`->[`train_graph_rnn.sh`](examples/run_more/train_graph_rnn.sh), `SelfAttStack`->[`train_stptr.sh`](examples/run_more/train_stptr.sh), `RNNStack`->[`train_stptr_rnn.sh`](examples/run_more/train_stptr_rnn.sh).
 * Extra: for these scripts, the file paths should be changed to the correct ones: `--word_path` for embedding file, `--train --dev --test` for corresponding data files.
 * Step 3: testing with the trained models (see [`examples/run_more/run_analyze.sh`](examples/run_more/run_analyze.sh)). Also, the paths for extra language data (`--test`) and extra language embeddings (`--extra_embed`) should be set correspondingly.
+* ---
 * Our trained models (English as source, 5 different random runs) can be found [here](https://www.google.com/url?q=https://drive.google.com/drive/u/2/folders/1je4RUuxcVT7VhNyy6dftv85cO-maHc1e&sa=D&source=hangouts&ust=1552094237684000&usg=AFQjCNE-fUsWqekSm_vtCOEQGOx8wU4W5A).
+* Warning: the embeddings of zh and ja are not well aligned, and our paper reports de-lexicalized results, which can be obtained by adding the flag `--no_word` both for training and testing.
+* Warning2: the outputs do not keep the original ordering of the input file, and are sorted by sentence length. Both the system output and gold parses in the new ordering are outputted (*_pred, *_gold).
 
 ### Easy running
 * For easy running following previous easy preparing:

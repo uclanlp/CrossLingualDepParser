@@ -6,12 +6,14 @@ KNOWN_LANG_IDS = {'ar', 'bg', 'ca', 'zh', 'hr', 'cs', 'da', 'nl', 'en', 'et', 'f
 def guess_language_id(file_path):
     bname = os.path.basename(file_path)
     lang_id = str.lower(bname[:2])
-    assert lang_id in KNOWN_LANG_IDS, "Unknown lang id %s from path %s" % (lang_id, file_path)
+    # assert lang_id in KNOWN_LANG_IDS, "Unknown lang id %s from path %s" % (lang_id, file_path)
+    if lang_id not in KNOWN_LANG_IDS:
+        print("Warning: Unknown lang id %s from path %s" % (lang_id, file_path))
     return lang_id
 
 def lang_specific_word(word, lang_id):
     if lang_id:
-        assert lang_id in KNOWN_LANG_IDS, "Unknown lang id %s" % (lang_id, )
+        # assert lang_id in KNOWN_LANG_IDS, "Unknown lang id %s" % (lang_id, )
         return "!%s_%s" % (lang_id, word)
     else:
         return word
