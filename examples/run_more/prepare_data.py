@@ -42,7 +42,7 @@ LANGUAGE_LIST = (
 TRAIN_LANG = "en"
 
 # confs
-UD2_DIR = "../data/ud-treebanks-v2.2/"
+UD2_DIR = "./ud-treebanks-v2.2/"
 OUT_DIR = "./data2.2_more/"
 LIB_DIR = "./data2.2_more/fastText_multilingual/"
 
