@@ -6,12 +6,29 @@ This is build based upon [NeuroNLP2](https://github.com/XuezheMax/NeuroNLP2) and
 
 ----------
 
-# Usage
+# Easy Running Steps
+
+We prepare some easy-to-run example scripts.
 
 ### Environment
 * This implementation should run in Python2 + Pytorch0.3, our suggestion is to use conda to install the required environment:
 * `conda create -n myenv python=2.7; source activate myenv; conda install gensim;`
 * `conda install pytorch=0.3.1 cuda80 -c pytorch`
+
+### Easy preparing
+* For easy preparing, simply run [`examples/run_more/go_data.sh`](examples/run_more/go_data.sh).  This is an one-step script to get and prepare all the data (might need much disk space, majorly for embeddings files).
+
+### Easy running
+* (Step 0): make a new DIR and cd into it, so that now data is at `../data2.2_more/` and source codes are at `../src/`. 
+* (Step 1): for building vocabs, run [`examples/run_more/go_vocab.sh`](examples/run_more/go_vocab.sh).
+* (Step 2): for training (SelfAtt-Graph for example, see previous scripts for the settings of other models), run [`examples/run_more/go_train.sh`](examples/run_more/go_train.sh).
+* (Step 3): for testing, run [`examples/run_more/go_test.sh`](examples/run_more/go_test.sh).
+
+----------
+
+# Details
+
+The rest provides more details for the steps of the runnings.
 
 ### Data Preparation
 * The data format is basically CoNLL-U Fomat ([here](https://universaldependencies.org/format.html)) in UD v2.2, but with some crucial differences:
@@ -31,24 +48,6 @@ This is build based upon [NeuroNLP2](https://github.com/XuezheMax/NeuroNLP2) and
 * Our trained models (English as source, 5 different random runs) can be found [here](https://www.google.com/url?q=https://drive.google.com/drive/u/2/folders/1je4RUuxcVT7VhNyy6dftv85cO-maHc1e&sa=D&source=hangouts&ust=1552094237684000&usg=AFQjCNE-fUsWqekSm_vtCOEQGOx8wU4W5A).
 * Warning: the embeddings of zh and ja are not well aligned, and our paper reports de-lexicalized results, which can be obtained by adding the flag `--no_word` both for training and testing.
 * Warning2: the outputs do not keep the original ordering of the input file, and are sorted by sentence length. Both the system output and gold parses in the new ordering are outputted (*_pred, *_gold).
-
-----------
-
-# Easy Running Steps
-
-We prepare some easy-to-run example scripts.
-
-### Environment
-* Use conda, see above.
-
-### Easy preparing
-* For easy preparing, simply run [`examples/run_more/go_data.sh`](examples/run_more/go_data.sh).  This is an one-step script to get and prepare all the data (might need much disk space, majorly for embeddings files).
-
-### Easy running
-* (Step 0): make a new DIR and cd into it, so that now data is at `../data2.2_more/` and source codes are at `../src/`. 
-* (Step 1): for building vocabs, run [`examples/run_more/go_vocab.sh`](examples/run_more/go_vocab.sh).
-* (Step 2): for training (SelfAtt-Graph for example, see previous scripts for the settings of other models), run [`examples/run_more/go_train.sh`](examples/run_more/go_train.sh).
-* (Step 3): for testing, run [`examples/run_more/go_test.sh`](examples/run_more/go_test.sh).
 
 ----------
 
