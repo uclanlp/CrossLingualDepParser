@@ -10,13 +10,14 @@ This is build based upon [NeuroNLP2](https://github.com/XuezheMax/NeuroNLP2) and
 
 We prepare some easy-to-run example scripts.
 
-### Environment
+### Easy preparing
+* (**Note**): The data-preparation script requires Python3. (while the rest main running after requires Python2)
+* For easy preparing, simply run [`examples/run_more/go_data.sh`](examples/run_more/go_data.sh).  This is an one-step script to get and prepare all the data (might need much disk space, majorly for embeddings files).
+
+### Running Environment
 * This implementation should run in Python2 + Pytorch0.3, our suggestion is to use conda to install the required environment:
 * `conda create -n myenv python=2.7; source activate myenv; conda install gensim;`
 * `conda install pytorch=0.3.1 cuda80 -c pytorch`
-
-### Easy preparing
-* For easy preparing, simply run [`examples/run_more/go_data.sh`](examples/run_more/go_data.sh).  This is an one-step script to get and prepare all the data (might need much disk space, majorly for embeddings files).
 
 ### Easy running
 * (Step 0): make a new DIR and cd into it, so that now data is at `../data2.2_more/` and source codes are at `../src/`. 
