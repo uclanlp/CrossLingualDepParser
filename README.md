@@ -1,6 +1,6 @@
 # Cross-Lingual Transfer with Order Differences
 
-This repo contains the code and models for the NAACL19 paper: "On Difficulties of Cross-Lingual Transfer with Order Differences: A Case Study on Dependency Parsing" [[arxiv]](https://arxiv.org/pdf/1811.00570.pdf) [[paper]]() [[bib]]()
+This repo contains the code and models for the NAACL19 paper: "On Difficulties of Cross-Lingual Transfer with Order Differences: A Case Study on Dependency Parsing" [[arxiv]](https://arxiv.org/pdf/1811.00570.pdf) [[paper]](https://www.aclweb.org/anthology/N19-1253) [[bib]](https://aclweb.org/anthology/papers/N/N19/N19-1253.bib)
 
 This is build based upon [NeuroNLP2](https://github.com/XuezheMax/NeuroNLP2) and PyTorch-0.3.
 
