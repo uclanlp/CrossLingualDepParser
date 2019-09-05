@@ -57,13 +57,14 @@ The rest provides more details for the steps of the runnings.
 If you find this repo useful, please cite our paper.
 
 ```
-@inproceedings{ahmad2019,
-  title = {On Difficulties of Cross-Lingual Transfer with Order Differences: 
-           A Case Study on Dependency Parsing},
-  author = {Ahmad, Wasi Uddin and Zhang, Zhisong and Ma, Zuezhe and Hovy, 
-            Eduard and Chang, Kai-Wei and Peng, Nanyun},
-  booktitle = {Proceedings of the 2019 Conference of the North American Chapter of 
-              the Association for Computational Linguistics: Human Language Technologies},
-  year = {2019}
+@inproceedings{ahmad-etal-2019-difficulties,
+    title = "On Difficulties of Cross-Lingual Transfer with Order Differences: A Case Study on 
+            Dependency Parsing",
+    author = "Ahmad, Wasi  and Zhang, Zhisong  and Ma, Xuezhe  and
+            Hovy, Eduard  and Chang, Kai-Wei  and Peng, Nanyun",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for 
+            Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    year = "2019",
+    pages = "2440--2452"
 }
 ```
